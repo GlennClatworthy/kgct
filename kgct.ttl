@@ -1,0 +1,52 @@
+# baseURI: http://tutorial.topbraid.com/kgct
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: kgct
+
+@prefix kgct: <http://tutorial.topbraid.com/kgct#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://tutorial.topbraid.com/kgct>
+  rdf:type owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+kgct:Statement_1
+  rdf:type rdfs:Class ;
+  rdfs:label "Statement 1" ;
+  rdfs:subClassOf rdf:Statement ;
+  skos:prefLabel "Statement 1" ;
+.
+kgct:bookDefinition
+  rdf:type rdf:Property ;
+  rdfs:comment "Points to a book chapter/section or online location where the subject term is defined" ;
+  rdfs:domain skos:Concept ;
+  rdfs:label "Book definition location" ;
+.
+kgct:bookReference
+  rdf:type rdf:Property ;
+  rdfs:comment "Points to a book chapter/section or online location where the subject term is referenced but not defined" ;
+  rdfs:domain skos:Concept ;
+  rdfs:label "Book reference location" ;
+.
+kgct:describes
+  rdf:type rdf:Property ;
+  rdfs:comment "Points to the public schema in which the term is formally defined" ;
+  rdfs:domain skos:Concept ;
+  rdfs:label "Term's rdf ontology source" ;
+.
+kgct:differentiates
+  rdf:type rdf:Property ;
+  rdfs:comment "Differentiates the term from a similar, complementary, or inverse term" ;
+  rdfs:domain skos:Concept ;
+  rdfs:label "Similar, complementary, or inverse term location" ;
+.
+kgct:example
+  rdf:type rdf:Property ;
+  rdfs:comment "Points to an example of the term used in code (e.g., Turtle, SPARQL)" ;
+  rdfs:domain skos:Concept ;
+  rdfs:label "Example of applied term" ;
+.
