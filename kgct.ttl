@@ -2,6 +2,7 @@
 # imports: http://www.w3.org/2004/02/skos/core
 # prefix: kgct
 
+@prefix bookclub: <https://dallemang.linked.data.world/d/bookclub/> .
 @prefix kgct: <http://tutorial.topbraid.com/kgct#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -14,29 +15,71 @@
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-kgct:Statement_1
+kgct:BookDOE1stEd
+  rdf:type kgct:PublicationSource ;
+  kgct:SourceURI "https://www.morganclaypool.com/doi/abs/10.2200/S00824ED1V01Y201801WBE017" ;
+  skos:prefLabel "Demystifying OWL for the Enterprise" ;
+.
+kgct:BookSWWO3rdEd
+  rdf:type kgct:PublicationSource ;
+  kgct:SourceURI "https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1564" ;
+  skos:prefLabel "Semantic Web for the Working Ontologist, Third Edition" ;
+.
+kgct:PublicationSource
   rdf:type rdfs:Class ;
-  rdfs:label "Statement 1" ;
-  rdfs:subClassOf rdf:Statement ;
-  skos:prefLabel "Statement 1" ;
+  rdfs:subClassOf rdfs:Class ;
+  skos:definition "A book, online source, or other resource making a statement about a skos:Concept" ;
+  skos:prefLabel "Publication source" ;
 .
-kgct:bookDefinition
-  rdf:type rdf:Property ;
-  rdfs:comment "Points to a book chapter/section or online location where the subject term is defined" ;
-  rdfs:domain skos:Concept ;
-  rdfs:label "Book definition location" ;
+kgct:RDF
+  rdf:type skos:Concept ;
+  kgct:sourceDefinition kgct:SiteW3CRDF ;
+  skos:altLabel "Resource Description Format" ;
+  skos:prefLabel "RDF" ;
 .
-kgct:bookReference
+kgct:SiteW3CRDF
+  rdf:type kgct:PublicationSource ;
+  kgct:SourceURI "https://www.w3.org/RDF/" ;
+  skos:prefLabel "Resource Description Framework page on W3C" ;
+.
+kgct:SourceURI
   rdf:type rdf:Property ;
-  rdfs:comment "Points to a book chapter/section or online location where the subject term is referenced but not defined" ;
+  rdfs:comment "Points to the URI of the book's publisher's site or other reference source" ;
+  rdfs:label "Source reference location" ;
+.
+kgct:Triple
+  rdf:type skos:Concept ;
+  kgct:sourceDefinition "https://dallemang.linked.data.world/d/bookclub/col-booktablecontent-chapter_section#row-booktablecontent-12" ;
+  kgct:sourceReference "https://dallemang.linked.data.world/d/bookclub/col-booktablecontent-chapter_section#row-booktablecontent-12" ;
+  skos:prefLabel "Triple" ;
+.
+kgct:Triple001
+  rdf:type rdf:Statement ;
+  kgct:assertedBy kgct:BookSWWO3rdEd ;
+  rdf:object "Triple—The fundamental data structure of RDF. A triple is made up of a subject, predicate, and object." ;
+  rdf:predicate skos:definition ;
+  rdf:subject kgct:Triple ;
+  rdfs:label "Triple001" ;
+.
+kgct:Triple002
+  rdf:type rdf:Statement ;
+  kgct:assertedBy kgct:BookDOE1stEd ;
+  rdf:object "Triples assert relationships between things--e.g., JaneDoe worksFor Microsoft." ;
+  rdf:predicate skos:definition ;
+  rdf:subject kgct:Triple ;
+  rdfs:label "Triple002" ;
+.
+kgct:assertedBy
+  rdf:type rdf:Property ;
+  rdfs:comment "Points to the source of an assertion about a concept for purposes of reification" ;
   rdfs:domain skos:Concept ;
-  rdfs:label "Book reference location" ;
+  rdfs:label "AssertedBy" ;
 .
 kgct:describes
   rdf:type rdf:Property ;
-  rdfs:comment "Points to the public schema in which the term is formally defined" ;
+  rdfs:comment "Points to the public URI of the schema in which the term is formally defined" ;
   rdfs:domain skos:Concept ;
-  rdfs:label "Term's rdf ontology source" ;
+  rdfs:label "Concept URI" ;
 .
 kgct:differentiates
   rdf:type rdf:Property ;
@@ -49,4 +92,16 @@ kgct:example
   rdfs:comment "Points to an example of the term used in code (e.g., Turtle, SPARQL)" ;
   rdfs:domain skos:Concept ;
   rdfs:label "Example of applied term" ;
+.
+kgct:sourceDefinition
+  rdf:type rdf:Property ;
+  rdfs:comment "Points to a book chapter/section or online location where the subject term is defined" ;
+  rdfs:domain skos:Concept ;
+  rdfs:label "Book definition location" ;
+.
+kgct:sourceReference
+  rdf:type rdf:Property ;
+  rdfs:comment "Points to a book chapter/section or online location where the subject term is referenced but not necessarily defined" ;
+  rdfs:domain skos:Concept ;
+  rdfs:label "Book reference location" ;
 .
