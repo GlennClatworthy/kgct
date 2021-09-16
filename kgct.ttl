@@ -17,12 +17,12 @@
 .
 kgct:BookDOE1stEd
   rdf:type kgct:PublicationSource ;
-  kgct:SourceURI "https://www.morganclaypool.com/doi/abs/10.2200/S00824ED1V01Y201801WBE017" ;
+  kgct:sourceURI "https://www.morganclaypool.com/doi/abs/10.2200/S00824ED1V01Y201801WBE017" ;
   skos:prefLabel "Demystifying OWL for the Enterprise" ;
 .
 kgct:BookSWWO3rdEd
   rdf:type kgct:PublicationSource ;
-  kgct:SourceURI "https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1564" ;
+  kgct:sourceURI "https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1564" ;
   skos:prefLabel "Semantic Web for the Working Ontologist, Third Edition" ;
 .
 kgct:PublicationSource
@@ -39,13 +39,8 @@ kgct:RDF
 .
 kgct:SiteW3CRDF
   rdf:type kgct:PublicationSource ;
-  kgct:SourceURI "https://www.w3.org/RDF/" ;
+  kgct:sourceURI "https://www.w3.org/RDF/" ;
   skos:prefLabel "Resource Description Framework page on W3C" ;
-.
-kgct:SourceURI
-  rdf:type rdf:Property ;
-  rdfs:comment "Points to the URI of the book's publisher's site or other reference source" ;
-  rdfs:label "Source reference location" ;
 .
 kgct:Triple
   rdf:type skos:Concept ;
@@ -104,4 +99,9 @@ kgct:sourceReference
   rdfs:comment "Points to a book chapter/section or online location where the subject term is referenced but not necessarily defined" ;
   rdfs:domain skos:Concept ;
   rdfs:label "Book reference location" ;
+.
+kgct:sourceURI
+  rdf:type rdf:Property ;
+  rdfs:comment "Points to the URI of the book's publisher's site or other reference source" ;
+  rdfs:label "Source reference location" ;
 .
