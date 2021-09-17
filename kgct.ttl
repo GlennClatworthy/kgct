@@ -18,18 +18,18 @@
 kgct:BookDOE1stEd
   rdf:type kgct:PublicationSource ;
   kgct:sourceURI "https://www.morganclaypool.com/doi/abs/10.2200/S00824ED1V01Y201801WBE017" ;
-  skos:prefLabel "Demystifying OWL for the Enterprise" ;
+  rdfs:label "Demystifying OWL for the Enterprise" ;
 .
 kgct:BookSWWO3rdEd
   rdf:type kgct:PublicationSource ;
   kgct:sourceURI "https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1564" ;
-  skos:prefLabel "Semantic Web for the Working Ontologist, Third Edition" ;
+  rdfs:label "Semantic Web for the Working Ontologist, Third Edition" ;
 .
 kgct:PublicationSource
   rdf:type rdfs:Class ;
+  rdfs:label "Publication source" ;
   rdfs:subClassOf rdfs:Class ;
   skos:definition "A book, online source, or other resource making a statement about a skos:Concept" ;
-  skos:prefLabel "Publication source" ;
 .
 kgct:RDF
   rdf:type skos:Concept ;
@@ -40,7 +40,7 @@ kgct:RDF
 kgct:SiteW3CRDF
   rdf:type kgct:PublicationSource ;
   kgct:sourceURI "https://www.w3.org/RDF/" ;
-  skos:prefLabel "Resource Description Framework page on W3C" ;
+  rdfs:label "Resource Description Framework page on W3C" ;
 .
 kgct:Triple
   rdf:type skos:Concept ;
