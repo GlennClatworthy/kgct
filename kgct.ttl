@@ -44,6 +44,7 @@ kgct:SiteW3CRDF
 .
 kgct:Triple
   rdf:type skos:Concept ;
+  kgct:ontologySource "https://www.w3.org/1999/02/22-rdf-syntax-ns" ;
   kgct:sourceDefinition "https://dallemang.linked.data.world/d/bookclub/col-booktablecontent-chapter_section#row-booktablecontent-12" ;
   kgct:sourceReference "https://dallemang.linked.data.world/d/bookclub/col-booktablecontent-chapter_section#row-booktablecontent-12" ;
   skos:prefLabel "Triple" ;
@@ -70,12 +71,6 @@ kgct:assertedBy
   rdfs:domain skos:Concept ;
   rdfs:label "AssertedBy" ;
 .
-kgct:describes
-  rdf:type rdf:Property ;
-  rdfs:comment "Points to the public URI of the schema in which the term is formally defined" ;
-  rdfs:domain skos:Concept ;
-  rdfs:label "Concept URI" ;
-.
 kgct:differentiates
   rdf:type rdf:Property ;
   rdfs:comment "Differentiates the term from a similar, complementary, or inverse term" ;
@@ -87,6 +82,12 @@ kgct:example
   rdfs:comment "Points to an example of the term used in code (e.g., Turtle, SPARQL)" ;
   rdfs:domain skos:Concept ;
   rdfs:label "Example of applied term" ;
+.
+kgct:ontologySource
+  rdf:type rdf:Property ;
+  rdfs:comment "Points to the public URI of the schema in which the term is formally defined" ;
+  rdfs:domain skos:Concept ;
+  rdfs:label "Concept URI" ;
 .
 kgct:sourceDefinition
   rdf:type rdf:Property ;
