@@ -1,6 +1,3 @@
-# baseURI: http://tutorial.topbraid.com/kgct
-# imports: http://www.w3.org/2004/02/skos/core
-
 @prefix bookclub: <https://dallemang.linked.data.world/d/bookclub/> .
 @prefix kgct: <https://github.com/GlennClatworthy/kgct/blob/main/kgct.ttl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -9,119 +6,115 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://tutorial.topbraid.com/kgct>
+<https://github.com/GlennClatworthy/kgct/blob/main/kgct.ttl>
   rdf:type owl:Ontology ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
 .
-<http://tutorial.topbraid.com/kgct#LearningPath>
+kgct:LearningPath
   rdf:type rdfs:Class ;
-  rdfs:comment "A series of concept references that point to one subdiscipline or subject (e.g., Turtle, SPARQL)" ;
+  rdfs:comment "A collection of related concepts which, combined, make up a sequence for learning a KG subject or process" ;
+  rdfs:label "Learning path" ;
   rdfs:subClassOf rdfs:Class ;
-  skos:prefLabel "Learning path" ;
 .
-<http://tutorial.topbraid.com/kgct#PublicationSource>
+kgct:PublicationSource
   rdf:type rdfs:Class ;
   rdfs:label "Publication source" ;
   rdfs:subClassOf rdfs:Class ;
   skos:definition "A book, online source, or other resource making a statement about a skos:Concept" ;
 .
-<http://tutorial.topbraid.com/kgct#RDF>
+kgct:RDF
   rdf:type skos:Concept ;
-  <http://tutorial.topbraid.com/kgct#sourceDefinition> <http://tutorial.topbraid.com/kgct#_SiteW3CRDF> ;
   skos:altLabel "Resource Description Format" ;
   skos:prefLabel "RDF" ;
+  kgct:sourceDefinition kgct:_SiteW3CRDF ;
 .
-<http://tutorial.topbraid.com/kgct#Triple>
+kgct:Triple
   rdf:type skos:Concept ;
-  <http://tutorial.topbraid.com/kgct#ontologySource> "https://www.w3.org/1999/02/22-rdf-syntax-ns" ;
-  <http://tutorial.topbraid.com/kgct#sourceDefinition> "https://dallemang.linked.data.world/d/bookclub/col-booktablecontent-chapter_section#row-booktablecontent-12" ;
-  <http://tutorial.topbraid.com/kgct#sourceReference> "https://dallemang.linked.data.world/d/bookclub/col-booktablecontent-chapter_section#row-booktablecontent-12" ;
   skos:prefLabel "Triple" ;
+  kgct:ontologyURI "https://www.w3.org/1999/02/22-rdf-syntax-ns" ;
+  kgct:sourceDefinition "https://dallemang.linked.data.world/d/bookclub/col-booktablecontent-chapter_section#row-booktablecontent-12" ;
+  kgct:sourceReference "https://dallemang.linked.data.world/d/bookclub/col-booktablecontent-chapter_section#row-booktablecontent-12" ;
 .
-<http://tutorial.topbraid.com/kgct#Triple001>
+kgct:Triple001
   rdf:type rdf:Statement ;
-  <http://tutorial.topbraid.com/kgct#assertedBy> <http://tutorial.topbraid.com/kgct#_BookSWWO3rdEd> ;
   rdf:object "Triple—The fundamental data structure of RDF. A triple is made up of a subject, predicate, and object." ;
   rdf:predicate skos:definition ;
-  rdf:subject <http://tutorial.topbraid.com/kgct#Triple> ;
+  rdf:subject kgct:Triple ;
   rdfs:label "Triple001" ;
+  kgct:assertedBy kgct:_BookSWWO3rdEd ;
 .
-<http://tutorial.topbraid.com/kgct#Triple002>
+kgct:Triple002
   rdf:type rdf:Statement ;
-  <http://tutorial.topbraid.com/kgct#assertedBy> <http://tutorial.topbraid.com/kgct#_BookDOE1stEd> ;
   rdf:object "Triples assert relationships between things--e.g., JaneDoe worksFor Microsoft." ;
   rdf:predicate skos:definition ;
-  rdf:subject <http://tutorial.topbraid.com/kgct#Triple> ;
+  rdf:subject kgct:Triple ;
   rdfs:label "Triple002" ;
+  kgct:assertedBy kgct:_BookDOE1stEd ;
 .
-<http://tutorial.topbraid.com/kgct#_BookDOE1stEd>
-  rdf:type <http://tutorial.topbraid.com/kgct#PublicationSource> ;
-  <http://tutorial.topbraid.com/kgct#sourceURI> "https://www.morganclaypool.com/doi/abs/10.2200/S00824ED1V01Y201801WBE017" ;
+kgct:_BookDOE1stEd
+  rdf:type kgct:PublicationSource ;
   rdfs:label "Demystifying OWL for the Enterprise" ;
+  kgct:publicationURI "https://www.morganclaypool.com/doi/abs/10.2200/S00824ED1V01Y201801WBE017" ;
 .
-<http://tutorial.topbraid.com/kgct#_BookSWWO3rdEd>
-  rdf:type <http://tutorial.topbraid.com/kgct#PublicationSource> ;
-  <http://tutorial.topbraid.com/kgct#sourceURI> "https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1564" ;
+kgct:_BookSWWO3rdEd
+  rdf:type kgct:PublicationSource ;
   rdfs:label "Semantic Web for the Working Ontologist, Third Edition" ;
+  kgct:publicationURI "https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1564" ;
 .
-<http://tutorial.topbraid.com/kgct#_PathRDFGeneral>
-  rdf:type <http://tutorial.topbraid.com/kgct#LearningPath> ;
-  rdfs:label " Path RDFGeneral" ;
-.
-<http://tutorial.topbraid.com/kgct#_PathRDFSPARQL>
-  rdf:type <http://tutorial.topbraid.com/kgct#LearningPath> ;
-  rdfs:label " Path RDFGeneral" ;
-.
-<http://tutorial.topbraid.com/kgct#_SiteW3CRDF>
-  rdf:type <http://tutorial.topbraid.com/kgct#PublicationSource> ;
-  <http://tutorial.topbraid.com/kgct#sourceURI> "https://www.w3.org/RDF/" ;
+kgct:_SiteW3CRDF
+  rdf:type kgct:PublicationSource ;
+  rdfs:comment "A collection of concepts related to one area of study (e.g., RDF, SPARQL)" ;
   rdfs:label "Resource Description Framework page on W3C" ;
+  kgct:publicationURI "https://www.w3.org/RDF/" ;
 .
-<http://tutorial.topbraid.com/kgct#assertedBy>
+kgct:assertedBy
   rdf:type rdf:Property ;
   rdfs:comment "Points to the source of an assertion about a concept for purposes of reification" ;
   rdfs:domain skos:Concept ;
   rdfs:label "AssertedBy" ;
 .
-<http://tutorial.topbraid.com/kgct#differentiates>
-  rdf:type rdf:Property ;
-  rdfs:comment "Differentiates the term from a similar, complementary, or inverse term" ;
-  rdfs:domain skos:Concept ;
-  rdfs:label "Similar, complementary, or inverse term location" ;
-.
-<http://tutorial.topbraid.com/kgct#example>
+kgct:conceptExample
   rdf:type rdf:Property ;
   rdfs:comment "Points to an example of the term used in code (e.g., Turtle, SPARQL)" ;
   rdfs:domain skos:Concept ;
   rdfs:label "Example of applied term" ;
 .
-<http://tutorial.topbraid.com/kgct#inLearningPath>
+kgct:differentiates
+  rdf:type rdf:Property ;
+  rdfs:comment "Differentiates the term from a similar, complementary, or inverse term" ;
+  rdfs:domain skos:Concept ;
+  rdfs:label "Similar, complementary, or inverse term location" ;
+.
+kgct:inLearningPath
   rdf:type rdf:Property ;
   rdfs:comment "Points to a subset of all resources focusing on one subject or area of instruction" ;
   rdfs:domain skos:Concept ;
   rdfs:label "In Learning Path" ;
+  rdfs:range kgct:LearningPath ;
 .
-<http://tutorial.topbraid.com/kgct#ontologySource>
+kgct:ontologyURI
   rdf:type rdf:Property ;
   rdfs:comment "Points to the public URI of the schema in which the term is formally defined" ;
   rdfs:domain skos:Concept ;
-  rdfs:label "Concept URI" ;
+  rdfs:label "Ontology URI" ;
 .
-<http://tutorial.topbraid.com/kgct#sourceDefinition>
+kgct:publicationURI
+  rdf:type rdf:Property ;
+  rdfs:comment "Points to the URI of the book's publisher's site or other reference source" ;
+  rdfs:label "Source reference location" ;
+.
+kgct:sourceDefinition
   rdf:type rdf:Property ;
   rdfs:comment "Points to a book chapter/section or online location where the subject term is defined" ;
   rdfs:domain skos:Concept ;
   rdfs:label "Book definition location" ;
 .
-<http://tutorial.topbraid.com/kgct#sourceReference>
+kgct:sourceReference
   rdf:type rdf:Property ;
   rdfs:comment "Points to a book chapter/section or online location where the subject term is referenced but not necessarily defined" ;
   rdfs:domain skos:Concept ;
   rdfs:label "Book reference location" ;
 .
-<http://tutorial.topbraid.com/kgct#sourceURI>
+kgct:testProperty
   rdf:type rdf:Property ;
-  rdfs:comment "Points to the URI of the book's publisher's site or other reference source" ;
-  rdfs:label "Source reference location" ;
+  rdfs:label "test property" ;
 .
