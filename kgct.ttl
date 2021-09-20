@@ -1,3 +1,7 @@
+# baseURI: https://github.com/GlennClatworthy/kgct/blob/main/kgct.ttl
+# prefix: kgct
+
+@prefix : <https://github.com/GlennClatworthy/kgct/blob/main/kgct.ttl#> .
 @prefix bookclub: <https://dallemang.linked.data.world/d/bookclub/> .
 @prefix kgct: <https://github.com/GlennClatworthy/kgct/blob/main/kgct.ttl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -113,8 +117,4 @@ kgct:sourceReference
   rdfs:comment "Points to a book chapter/section or online location where the subject term is referenced but not necessarily defined" ;
   rdfs:domain skos:Concept ;
   rdfs:label "Book reference location" ;
-.
-kgct:testProperty
-  rdf:type rdf:Property ;
-  rdfs:label "test property" ;
 .
