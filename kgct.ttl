@@ -29,11 +29,13 @@ kgct:RDF
   rdf:type skos:Concept ;
   skos:altLabel "Resource Description Format" ;
   skos:prefLabel "RDF" ;
+  kgct:inLearningPath kgct:_PathRDF ;
   kgct:sourceDefinition kgct:_SiteW3CRDF ;
 .
 kgct:Triple
   rdf:type skos:Concept ;
   skos:prefLabel "Triple" ;
+  kgct:inLearningPath kgct:_PathRDF ;
   kgct:ontologyURI "https://www.w3.org/1999/02/22-rdf-syntax-ns" ;
   kgct:sourceDefinition "https://dallemang.linked.data.world/d/bookclub/col-booktablecontent-chapter_section#row-booktablecontent-12" ;
   kgct:sourceReference "https://dallemang.linked.data.world/d/bookclub/col-booktablecontent-chapter_section#row-booktablecontent-12" ;
@@ -63,6 +65,21 @@ kgct:_BookSWWO3rdEd
   rdf:type kgct:PublicationSource ;
   rdfs:label "Semantic Web for the Working Ontologist, Third Edition" ;
   kgct:publicationURI "https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1564" ;
+.
+kgct:_PathRDF
+  rdf:type kgct:LearningPath ;
+  rdfs:comment "Points to book, web, and article references teaching users the basics of the Resource Description Format" ;
+  rdfs:label "Path SPARQL" ;
+.
+kgct:_PathSPARQL
+  rdf:type kgct:LearningPath ;
+  rdfs:comment "Points to book, web, and article references teaching users how to write SPARQL queries" ;
+  rdfs:label "Path SPARQL" ;
+.
+kgct:_PathTurtle
+  rdf:type kgct:LearningPath ;
+  rdfs:comment "Points to book, web, and article references teaching users how to code RDF using Turtle" ;
+  rdfs:label "Path SPARQL" ;
 .
 kgct:_SiteW3CRDF
   rdf:type kgct:PublicationSource ;
