@@ -19,6 +19,12 @@ kgct:LearningPath
   rdfs:label "Learning path" ;
   rdfs:subClassOf rdfs:Class ;
 .
+kgct:OWL
+  rdf:type skos:Concept ;
+  skos:altLabel "Web Ontology Language" ;
+  skos:prefLabel "OWL" ;
+  kgct:inLearningPath kgct:_PathOWL ;
+.
 kgct:PublicationSource
   rdf:type rdfs:Class ;
   rdfs:label "Publication source" ;
@@ -65,6 +71,11 @@ kgct:_BookSWWO3rdEd
   rdf:type kgct:PublicationSource ;
   rdfs:label "Semantic Web for the Working Ontologist, Third Edition" ;
   kgct:publicationURI "https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1564" ;
+.
+kgct:_PathOWL
+  rdf:type kgct:LearningPath ;
+  rdfs:comment "Points to book, web, and article references teaching users the basics of the Web Ontology Language" ;
+  rdfs:label "Path OWL" ;
 .
 kgct:_PathRDF
   rdf:type kgct:LearningPath ;
