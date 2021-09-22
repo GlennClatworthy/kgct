@@ -1,7 +1,5 @@
 # baseURI: https://github.com/GlennClatworthy/kgct/blob/main/kgct.ttl
-# prefix: kgct
 
-@prefix : <https://github.com/GlennClatworthy/kgct/blob/main/kgct.ttl#> .
 @prefix bookclub: <https://dallemang.linked.data.world/d/bookclub/> .
 @prefix kgct: <https://github.com/GlennClatworthy/kgct/blob/main/kgct.ttl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -10,7 +8,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://github.com/GlennClatworthy/kgct/blob/main/kgct.ttl>
+kgct:
   rdf:type owl:Ontology ;
 .
 kgct:LearningPath
